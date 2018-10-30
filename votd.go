@@ -57,13 +57,24 @@ func exists(path string) (bool, error) {
 
 func checkError(err error) {
 	if err != nil {
-		// Fail without causing an error
-		fmt.Print("🚧 Could not load verse 🚧")
+		// Print to STDERR the error
+		println(err.Error())
+
+		// Print a user friendly message to STDOUT
+		fmt.Println("Could not load verse of the day")
 		os.Exit(0)
 	}
 }
 
 func main() {
+	if apiToken == "" {
+		checkError(errors.New("Missing API Token"))
+	}
+
+	if versionID == "" {
+		versionID = "1"
+	}
+
 	ex, err := os.Executable()
 	if err != nil {
 		checkError(err)
@@ -141,6 +152,7 @@ func main() {
 			checkError(err)
 		}
 
+		// Ignore any errors here for now since this is only caching the response
 		_ = ioutil.WriteFile(cacheFile, data, os.ModePerm)
 	}
 
