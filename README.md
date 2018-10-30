@@ -22,14 +22,14 @@ The YouVersion Bible Version ID can be obtains by calling the [YouVersion Versio
 
 The YouVersion VOTD CLI caches each day's verse of the day in a dated file found in the `$GOPATH/bin/.votd`. For example, if the YouVersion VOTD CLI was executed for the first time on 10/30/2018 the resulting response would be cached in the file `$GOPATH/bin/votd/20181030`
 
-###TODO
+### TODO
 
-[ ] Add support to pass in command line arguments
-[ ] Fail back to prior votd on error
-[ ] Add support to fetch supported versions and their Id's
-[ ] Add support for converting VOTD image to ASCII art
+- [ ] Add support to pass in command line arguments
+- [ ] Fail back to prior votd on error
+- [ ] Add support to fetch supported versions and their Id's
+- [ ] Add support for converting VOTD image to ASCII art
 
-###Example Usage
+### Example Usage
 The YouVersion VOTD CLI could be used to print the current version of the day the terminal window by setting up your `.bashrc` or `.bash_profile` with the following (assuming that the `$GOPATH/bin` directory is on your `$PATH`):
 
 ```bash
