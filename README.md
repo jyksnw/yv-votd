@@ -1,8 +1,8 @@
-# YouVersion VOTD CLI
+# Verse of the day (VOTD) Command line app
 
 A command line interface (CLI) to fetch the current verse of the day from [YouVersion](https://www.youversion.com) public votd [API](https://developers.youversion.com)
 
-The YouVersion VOTD CLI has been developed using the [Go programming language](https://golang.org) and currently requires to be installed from source. If [Go](https://golang.org/doc/install#install) has been installed than installation is as easy as running:
+The app has been developed using the [Go programming language](https://golang.org) and currently requires to be installed from source. If [Go](https://golang.org/doc/install#install) has been installed than installation is as easy as running:
 
 ```bash
 go get -u github.com/jyksnw/yv-votd
@@ -11,7 +11,7 @@ go install github.com/jyksnw/yv-votd
 
 ## Environment Variables
 
-There are two environment variable that may be set prior to running the YouVersion VOTD CLI:
+There are two environment variables that may be set prior to running the application:
 
 | Variable  | Required  | Description  |
 |---|:---:|---|
@@ -24,11 +24,11 @@ The YouVersion Bible Version ID can be obtained by calling the [YouVersion Versi
 
 ## Caching
 
-The YouVersion VOTD CLI caches each day's verse of the day in a dated file found in the `$GOPATH/bin/.votd` folder. For example, if the YouVersion VOTD CLI was executed for the first time on 10/30/2018 the resulting response would be cached in the file `$GOPATH/bin/.votd/20181030`. Removing this file or this folder will result in the YouVersion VOTD CLI to re-fetch the current verse of the day.
+The application caches each day's verse of the day in a dated file found in the `$GOPATH/bin/.votd` folder. For example, if the application was executed for the first time on 10/30/2018 the resulting response would be cached in the file `$GOPATH/bin/.votd/20181030`. Removing this file or this folder will result in the application to re-fetch the current verse of the day.
 
 ## Example Usage
 
-The YouVersion VOTD CLI could be used to print the current verse of the day to any new terminal windows by setting up your `.bashrc` or `.bash_profile` with the following (assuming that the `$GOPATH/bin` directory is on your `$PATH`):
+The application could be used to print the current verse of the day to any new terminal windows by setting up your `.bashrc` or `.bash_profile` with the following (assuming that the `$GOPATH/bin` directory is on your `$PATH`):
 
 ```bash
 export YOUVERSION_VOTD_TOKEN={your_developer_token}
@@ -36,7 +36,7 @@ export YOUVERSION_VOTD_VERSION=1 #1=KJV, 12=ASV, 206=WEB
 yv-votd | cowsay -f stegosaurus
 ```
 
-![YouVersion VOTD CLI Stegosaurus](images/yv_votd_stegasaurus.png)
+![Stegosaurus verse of the day](images/yv_votd_stegasaurus.png)
 
 ## TODO
 
