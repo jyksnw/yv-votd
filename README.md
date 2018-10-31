@@ -20,11 +20,11 @@ There are two environment variable that may be set prior to running the YouVersi
 
 A YouVersion Developer Token can be obtained by creating an account on the [YouVersion Developer Portal](https://developers.youversion.com)
 
-The YouVersion Bible Version ID can be obtains by calling the [YouVersion Versions API](https://yv-public-api-docs.netlify.com/api/versions.html). If the `YOUVERSION_VOTD_VERSION` environment variable is not set than a default version_id of 1 will be used which maps to the KJV.
+The YouVersion Bible Version ID can be obtained by calling the [YouVersion Versions API](https://yv-public-api-docs.netlify.com/api/versions.html). If the `YOUVERSION_VOTD_VERSION` environment variable is not set than a default version_id of 1 will be used which maps to the KJV.
 
 ## Caching
 
-The YouVersion VOTD CLI caches each day's verse of the day in a dated file found in the `$GOPATH/bin/.votd` folder. For example, if the YouVersion VOTD CLI was executed for the first time on 10/30/2018 the resulting response would be cached in the file `$GOPATH/bin/.votd/20181030`. Delete this file or this folder will result in the YouVersion VOTD CLI to re-fetch the verse of the day for the current day.
+The YouVersion VOTD CLI caches each day's verse of the day in a dated file found in the `$GOPATH/bin/.votd` folder. For example, if the YouVersion VOTD CLI was executed for the first time on 10/30/2018 the resulting response would be cached in the file `$GOPATH/bin/.votd/20181030`. Removing this file or this folder will result in the YouVersion VOTD CLI to re-fetch the current verse of the day.
 
 ## Example Usage
 
